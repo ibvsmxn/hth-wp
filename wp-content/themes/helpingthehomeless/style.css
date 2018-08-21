@@ -1,0 +1,2060 @@
+/*
+Theme Name: Helping The Homeless
+Theme URI: http://wordpress.org/themes/helpingthehomeless
+Author: D'André Phillips
+Author URI: http://dandre.rf.gd
+Description: The first WordPress theme for Helping The Homeless website. Built to complement the fourth revision to HTH. 
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: lighter;
+	-webkit-font-smoothing: antialiased;
+	background-color: #151414;
+	color: #dcdcdc;
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+	background-color: black;
+	width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: white;
+	transition: 0.5s all ease-in-out;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background-color: #bb0000;
+	transition: 0.5s all ease-in-out;
+}
+
+/* Bootstrap Alterations */
+
+.jumbotron {
+	padding-top: 30vh;
+	padding-bottom: 30vh;
+	margin-bottom: -30px;
+	background-image: url(Images/homeless-man.jpg);
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+/* End of Bootstrap Alterations */
+
+/* Essentials Section */
+
+header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	border-bottom: 1px solid rgba(255,255,255,0.25);
+	/*border-top: 5px solid #bb0000;*/
+	display: inline-block;
+	padding-left: 25px;
+	padding-right: 25px;
+	z-index: 10;
+	transition: 0.3s all ease;
+}
+
+header ul a li {
+	display: inline-block;
+	list-style: none;
+}
+
+header .menu-toggler {
+	display: inline-block;
+	float: right;
+	padding: 15px;
+	margin-right: -4em;
+}
+
+header .menu-toggler a {
+	color: white;
+}
+
+header .donate-button {
+	display: inline-block;
+	float: right;
+	padding: 30px;
+	border-left: 1px solid rgba(255,255,255,0.25);
+	color: white;
+	font-size: 1.25em;
+	background-color: rgba(187,0,0,0.5);
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2 {
+	/*font-family: 'News Cycle', sans-serif;*/
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h1.title {
+	color: white;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: -1.5em;
+    padding: 15px 0px;
+    opacity: 0.9;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0px;
+    font-size: 1.75em;
+    width: 100%;
+}
+
+@keyframes suppourtText {
+	0% {
+		color: transparent;
+	}
+
+	100% {
+		color: white;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	h1.title {
+		color: white;
+		display: inline-block;
+		margin-top: 12.5px;
+		padding: 15px 0px;
+		opacity: 0.9;
+		font-family: 'Titillium Web', 'Segoe UI Light', 'Arial', sans-serif;
+	    letter-spacing: 0px;
+	    font-size: 2em;
+	    width: auto;
+	}
+
+	h1.title::after {
+		content: 'Making a Change';
+		display: inline-block;
+		text-transform: uppercase;
+		position: relative;
+		font-size: 19px;
+		top: 0px;
+		left: 20px;
+		letter-spacing: 5px;
+		color: transparent;
+		animation: 2s ease 9s 1 suppourtText forwards;
+	}
+
+	header .menu-toggler {
+		margin-right: 0em;
+	}
+
+	header:hover {
+		background-color: rgba(0,0,0,0.85) !important;
+		transition: 0.3s all ease;
+	}
+
+	header:hover h1.title::after {
+		color: #bb0000;
+	}
+
+}
+
+.jumbotron .h1, .jumbotron h1 {
+	font-size: 50px;
+}
+
+h1 a {
+	color: white;
+}
+
+h1 a:hover {
+	text-decoration: none;
+	color: inherit;
+	opacity: 1;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.cta-main {
+	color: white;
+	float: left;
+}
+
+a.cta-main {
+	font-family: 'Titillium Web', sans-serif;
+	border: 1px solid rgba(255,255,255,0.5);
+	padding: 25px;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: white;
+	margin-right: 5px;
+	width: 48%;
+	transition: 0.3s all ease-in-out;
+}
+
+a.cta-main:hover {
+	background-color: rgba(255,255,255,0.9);
+	text-decoration: none;
+	color: #bb0000;
+	transition: 0.3s all ease-in-out;
+	box-shadow: 0px 0px 35px black;
+}
+
+a.cta-main.highlight {
+	color: rgba(255,255,255,0.8);
+	border-color: transparent;
+	background-color: rgba(187,0,0,0.75);
+	border: 1px solid rgba(187,0,0,0.75);
+}
+
+a.cta-main.highlight:hover {
+	border: 1px solid rgba(187,0,0,0.75);
+	color: white;
+}
+
+.social-section {
+	position: fixed;
+	top: 30vh;
+	left: 0px;
+	border: 1px solid rgba(255,255,255,0.25);
+	border-left: none;
+	width: 6em;
+	z-index: 9;
+}
+
+.social-section i {
+	font-size: 2em;
+	border-bottom: 1px solid rgba(255,255,255,0.25);
+	padding: 1em;
+	color: white;
+	width: 100%;
+	text-align: center;
+	transition: 0.3s all ease;
+}
+
+.social-section i:last-of-type {
+	border-bottom: none;
+}
+
+.social-section i:hover {
+	color: #bb0000;
+	background-color: white;
+	transition: 0.3s all ease;
+}
+ 
+.jumbotron h1 {
+	text-align: left;
+    width: 100%;
+    font-size: 2.5em;
+    padding: 0em 0.5em;
+}
+
+.jumbotron p {
+	text-align: left;
+	font-size: 2em;
+}
+
+@media screen and (max-width: 767px) {
+
+	.social-section {
+		display: none;
+	}
+
+	.jumbotron p {
+		padding: 5px 20px;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+
+	.jumbotron h1 {
+		text-shadow: 0px 0px 50px black;
+	    text-align: left;
+	    width: 75%;
+	    font-size: 4em;
+	    padding: 0px;
+	}
+
+	a.cta-main {
+		padding: 25px;
+		font-size: 1.5em;
+		width: auto;
+	}
+
+	h1.title {
+	    margin-left: -10px;
+	    font-size: 1.75em;
+	}
+
+}
+
+@keyframes jumbotronChangeColour {
+	0% {
+		background-color: rgba(0,0,0,0.85);
+	}
+
+	/*50% {
+		background-color: rgba(255,255,255,0.25);
+	}*/
+
+	100% {
+		background-color: rgba(187,0,0,0.75);
+	}
+}
+
+.jumbotron-dim {
+	width: 100%;
+    height: 100%;
+    /*background-color: rgba(0,0,0,0.85);*/
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 30vh;
+    margin-top: -30vh;
+    padding-bottom: 30vh;
+    margin-bottom: -30vh;
+    /*animation: 3s ease-in-out 6s 1 jumbotronChangeColour forwards;*/
+}
+
+span.emphasis {
+	font-style: italic;
+}
+
+/* End of Essential Section */
+
+/* Layouts Section */
+
+.height-200 {
+	text-align: center;
+	padding: 200px;
+	margin: -200px;
+}
+
+/* Ends of Layouts Section */
+
+/* Splash Screen */
+	
+@keyframes SplashMoveUp {
+	0% {
+		top: 0%;
+	}
+
+	99% {
+		top: -100%;
+	}
+
+	100% {
+		top: -1000%;
+		display: none;
+	}
+}
+
+@keyframes spinLoad {
+	0% {
+		transform: rotate(0deg);
+		color: #bb0000;
+	}
+
+	50% {
+		color: white;
+		box-shadow: 0px 0px 15px black;
+	}
+
+	100% {
+		transform: rotate(360deg);
+		color: #bb0000;
+	}
+}
+
+.splash-screen {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	background-color: #000000;
+	background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23bb0000' fill-opacity='0.13'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	background-attachment: fixed;
+	box-shadow: 0px 0px 50px black;
+	z-index: 100;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: 1.5s ease-in-out 3s 1 SplashMoveUp forwards;
+}
+
+.splash-screen h1 {
+	font-size: 3em;
+}
+
+.splash-screen h2 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.splash-screen i {
+	width: 1em;
+	color: #bb0000;
+	font-size: 2.5em;
+	animation: 1.5s cubic-bezier(0.96, 0.01, 0, 0.99) 0s infinite spinLoad;
+}
+
+@media screen and (min-width: 768px) {
+
+	.splash-screen h1 {
+		font-size: 5em;
+	}
+
+	.splash-screen h2 {
+		font-size: 30px;
+	}
+
+	.splash-screen i {
+		font-size: 3em;
+	}
+
+}
+
+/* End of Splash Screen */
+
+/* Navigation Menu */
+
+.overlay {
+    height: 100vh;
+    width: 50%;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: -100%;
+    background-color: rgba(0,0,0, 0.9);
+    overflow: hidden;
+    /*border-left: 50px solid white;*/
+    transition: 0.5s all ease-in-out;
+}
+
+.overlay-2 {
+    height: 100vh;
+    width: 50%;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: -100%;
+    background-color: rgba(255,255,255, 0.9);
+    overflow: hidden;
+    /*border-right: 50px solid black;*/
+    transition: 0.5s all ease-in-out;
+}
+
+.overlay h2 {
+	font-size: 3em;
+	padding: 1em;
+}
+
+.overlay-2 h2 {
+	color: black;
+	font-size: 3em;
+	padding: 1em;
+}
+
+.overlay.big-event {
+	background-image: url(Images/rave-2.jpg);
+}
+
+.overlay .section-content {
+	width: 100%;
+    padding: 12.5%;
+    padding-top: 6.25%;
+    bottom: 50px;
+    position: absolute;
+}
+
+.overlay h2.section-content-title {
+	padding-left: 0px;
+	padding-bottom: 0px;
+}
+
+a.open-menu-button {
+	font-size: 37.5px;
+    margin: 0px;
+    height: 1em;
+    border-left: 1px solid rgba(255,255,255,0.25);
+    border-right: 1px solid rgba(255,255,255,0.25);
+    padding: 20px 25px;
+    transition: 0.3s all ease-in-out;
+}
+
+a.open-menu-button:hover {
+	text-decoration: none;
+	background-color: white;
+	color: black;
+	transition: 0.3s all ease-in-out;
+}
+
+a.open-menu-button:active {
+	background-color: #bb0000;
+	color: white;
+	transition: 0.3s all ease;
+}
+
+a.closebtn {
+	font-size: 4em;
+    display: block;
+    color: black;
+    transition: 0.3s all ease-in-out;
+    border: 1px solid black;
+    padding: 25px;
+    height: 90px;
+    padding-top: 0px;
+    float: right;
+    margin-right: 40%;
+    margin-top: 45px;
+}
+
+a.closebtn:hover {
+	text-decoration: none;
+	color: white;
+	background-color: black;
+	transition: 0.3s all ease-in-out;
+}
+
+#myNav, #myNav-2 {
+	transition: 1s all cubic-bezier(0.79, 0.37, 0, 1.01);
+}
+
+#myNav:hover {
+	background-color: rgba(0,0,0,0.95);
+	transition: 0.5s all ease;
+}
+
+.menu {
+	font-family: 'Titillium Web', sans-serif;
+	height: 100vh;
+}
+
+.menu-2 ul {
+	margin-top: 5em;
+}
+
+.menu-2 ul a {
+	width: 13em;
+    font-size: 2em;
+    transition: 0.3s all ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    margin: 5px;
+    margin-left: 0em;
+    display: inline-block;
+    text-align: left;
+    padding: 17.5px;
+    color: black;
+    transition: 0.3s all ease-in-out;
+}
+
+.menu-2 ul a:hover {
+	text-decoration: none;
+	border-bottom: 1px solid black;
+	color: #bb0000;
+	/*background-color: rgba(255,255,255,0.05);*/
+	width: 15em;
+	transition: 0.3s all ease-in-out;
+}
+
+.menu-2 {
+	font-family: 'Titillium Web', sans-serif;
+	overflow-y: hidden;
+}
+
+.menu-2 .next-event-section {
+	width: 100%;
+    padding: 5em 3em;
+    background-image: url(Images/rave-dark.jpg);
+    opacity: 0.9;
+    display: inline-block;
+    transition: 0.3s all ease;
+}
+
+.menu-2 .next-event-section:hover {
+	opacity: 1;
+	transition: 0.3s all ease;
+}
+
+.menu-2 .next-event-section h3 {
+	font-size: 3em;
+	color: black;
+}
+
+.menu-2 .next-event-section p {
+	font-size: 1.5em;
+	line-height: 1em;
+	color: black;
+}
+
+.menu-2 .main-story {
+	width: 100%;
+    padding-top: 20em;
+    padding-bottom: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    background-image: url(Images/asda.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    transition: 0.3s all ease;
+}
+
+.menu-2 .main-story:hover {
+	opacity: 1;
+	transition: 0.3s all ease;
+}
+
+.menu-2 .main-story .tint-story {
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    padding: 23em;
+    padding-top: 0em;
+    padding-bottom: 12em;
+    margin-left: -5em;
+    margin-right: 0em;
+    display: inline;
+}
+
+.menu-2 .main-story p {
+	font-size: 1.25em;
+	max-width: 75%;
+}
+
+.menu-2 .main-story h3 {
+	font-size: 3em;
+}
+
+.menu-2 .subscribe-section {
+	background-image: url(Images/hth2.jpeg);
+	background-position: middle;
+	width: 100%;
+    padding: 2em 3em;
+    opacity: 0.9;
+    display: inline-block;
+    transition: 0.3s all ease;
+}
+
+.menu-title {
+	width: 100%;
+    padding: 12.5%;
+    margin-top: 40%;
+}
+
+.menu h1 {
+	font-size: 5em;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.menu h4.section-name-title, .menu h4#timed-greeting {
+	color: rgba(255,255,255,0.5);
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+
+.menu a.cta {
+	font-size: 1.5em;
+    color: white;
+    padding: 15px 45px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 20px;
+    border: 1px solid white;
+    transition: 0.3s all ease;
+}
+
+.menu a.cta:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.menu a.cta.highlight {
+	background-color: #bb0000;
+	border-color: transparent;
+}
+
+.menu a.cta.highlight:hover {
+	background-color: white;
+	color: black;
+}
+
+/* End of Navigation Menu */
+
+/* About Us Section */
+
+.about-us-section {
+	text-align: center;
+	/*padding: 200px;*/
+	background-image: url(Images/hth1.jpg);
+	background-size: cover;
+	/*background-attachment: fixed;
+	background-position: top;*/
+	transition: 0.3s all ease;
+	box-shadow: 0px 0px 50px black;
+}
+
+.about-us-section:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.about-us-section a.cta {
+	color: white;
+	padding: 15px;
+	display: inline-block;
+	margin: 5px;
+	margin-top: 20px;
+	border: 1px solid white;
+}
+
+.about-us-section h2.title {
+	border-left: 1px solid white;
+    margin-left: -20px;
+    padding-left: 20px;
+    height: 70px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: left;
+	padding-bottom: 15px;
+}
+
+.about-us-section h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.about-us-section .social {
+	padding-top: 15px;
+}
+
+.about-us-section .social i {
+	font-size: 3em;
+	padding: 15px;
+}
+
+.about-us-section .tint {
+	background-color: rgba(0,0,0,0.5);
+	/*padding: 100px;
+    margin: -200px;*/
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.about-us-section .tint {
+		background-color: rgba(0,0,0,0.5);
+		/*padding: 200px;
+	    margin: -200px;*/
+	    transition: 0.3s all ease;
+	}
+
+}
+
+.about-us-section .tint:hover {
+	background-color: rgba(0,0,0,0.6);
+	transition: 0.3s all ease;
+}
+
+.about-us-section .left-side {
+	/*background-image: url(Images/hth1.jpg);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 100px;
+    margin: 0px;
+}
+
+.about-us-section .right-side {
+	/*background-image: url(Images/hth1.jpg);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 100px;
+    margin: 0px;
+}
+
+.about-us-section p {
+	font-size: 1.25em;
+	text-align: left;
+}
+
+/* End of About Us Section */
+
+/* Stay Connected */
+
+.stay-connected-section {
+	text-align: center;
+	padding: 200px;
+	background-image: url(Images/lidl-warm.jpg);
+	background-size: cover;
+	/*background-attachment: fixed;
+	background-position: top;*/
+	transition: 0.3s all ease;
+}
+
+.stay-connected-section:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.stay-connected-section a.cta {
+	color: white;
+	padding: 15px;
+	display: inline-block;
+	margin: 5px;
+	margin-top: 20px;
+	border: 1px solid white;
+}
+
+.stay-connected-section h2.title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.stay-connected-section h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.stay-connected-section .social {
+	padding-top: 15px;
+}
+
+.stay-connected-section .social a.social-icon i {
+	color: white;
+	font-size: 3em;
+	padding: 15px;
+	width: 2em;
+	transition: 0.3s all ease;
+}
+
+.stay-connected-section .social a.social-icon:hover i {
+	color: #bb0000;
+	transition: 0.3s all ease;
+}
+
+.stay-connected-section .tint {
+	background-color: rgba(0,0,0,0.5);
+	padding: 100px;
+    margin: -200px;
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.stay-connected-section .tint {
+		background-color: rgba(0,0,0,0.5);
+		padding: 200px;
+	    margin: -200px;
+	    transition: 0.3s all ease;
+	}
+
+}
+
+.stay-connected-section .tint:hover {
+	background-color: rgba(0,0,0,0.6);
+	transition: 0.3s all ease;
+}
+
+/* End of Stay Connected */
+
+/* Big Event Section */
+
+.big-event-section {
+	text-align: center;
+	padding: 200px;
+	background-image: url(Images/rave-dark.jpg);
+	/*background-attachment: fixed;
+	background-position: top;*/
+	transition: 0.3s all ease;
+}
+
+.big-event-section:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.big-event-section a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 30px;
+    border: 1px solid white;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+}
+
+.big-event-section a.cta:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.big-event-section h2.title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.big-event-section h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.big-event-section .tint {
+	background-color: rgba(0,0,0,0.6);
+	padding: 100px;
+    margin: -200px;
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.big-event-section .tint {
+		background-color: rgba(0,0,0,0.5);
+		padding: 200px;
+	    margin: -200px;
+	    transition: 0.3s all ease;
+	}
+
+}
+
+.big-event-section .tint:hover {
+	background-color: rgba(0,0,0,0.6);
+	transition: 0.3s all ease;
+}
+
+/* End of Big Event Section */
+
+/* Donate Section */
+
+.donate-section {
+	color: white;
+	text-align: center;
+	/*padding: 200px;*/
+	background-image: url(Images/food.jpeg);
+	background-size: cover;
+	background-position: 0% 40%;
+	text-align: right;
+	transition: 0.3s all ease;
+}
+
+.donate-section:hover {
+	background-position: 0% 50%;
+	transition: 0.3s all ease;
+}
+
+.donate-section a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 10em;
+    border: 1px solid white;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+    float: left;
+    text-align: center;
+}
+
+.donate-section a.cta:hover {
+	color: black;
+	background-color: white;
+	transition: 0.3s all ease;
+}
+
+.donate-section h2.title {
+	border-right: 1px solid white;
+    margin-right: -20px;
+    padding-right: 20px;
+    height: 70px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: left;
+	padding-bottom: 15px;
+	text-align: right
+}
+
+.donate-section h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.donate-section .social {
+	padding-top: 15px;
+}
+
+.donate-section .social i {
+	font-size: 3em;
+	padding: 15px;
+}
+
+.donate-section .tint {
+	background-color: rgba(187, 0, 0, 0.75);
+	/*padding: 100px;
+    margin: -200px;*/
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.donate-section .tint {
+		background-color: rgba(187, 0, 0, 0.9);
+		/*padding: 200px;
+    	margin: -200px;*/
+    	transition: 0.3s all ease;
+	}
+
+}
+
+.donate-section .tint:hover {
+	background-color: rgba(187,0,0,0.95);
+	transition: 0.3s all ease;
+}
+
+.donate-section .left-side {
+	/*background-image: url(Images/hth1.jpg);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 100px;
+    margin: 0px;
+}
+
+.donate-section .right-side {
+	/*background-image: url(Images/hth1.jpg);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 100px;
+    margin: 0px;
+}
+
+.donate-section p {
+	font-size: 1.25em;
+	text-align: right;
+}
+
+/* End of Donate Section */
+
+/* Contact Us Section */
+
+.contact-us-section {
+	color: black;
+	text-align: center;
+	/*padding: 200px;*/
+	background-image: url(Images/kc.jpg);
+	background-size: cover;
+	/*background-attachment: fixed;
+	background-position: top;*/
+	transition: 0.3s all ease;
+}
+
+.contact-us-section:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.contact-us-section a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: black;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 10em;
+    border: 1px solid black;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+    float: right;
+}
+
+.contact-us-section a.cta:hover {
+	background-color: black;
+	color: white;
+	border-color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.contact-us-section h2.title {
+	border-left: 1px solid black;
+    margin-left: -20px;
+    padding-left: 20px;
+    height: 70px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-align: left;
+	padding-bottom: 15px;
+}
+
+.contact-us-section h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.contact-us-section .social {
+	padding-top: 15px;
+}
+
+.contact-us-section .social i {
+	font-size: 3em;
+	padding: 15px;
+}
+
+.contact-us-section .tint {
+	background-color: rgba(255,255,255,0.65);
+	/*padding: 100px;
+    margin: -200px;*/
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.contact-us-section .tint {
+		background-color: rgba(255,255,255,0.65);
+		/*padding: 200px;
+	    margin: -200px;*/
+	    transition: 0.3s all ease;
+	}
+
+}
+
+.contact-us-section .tint:hover {
+	background-color: rgba(255,255,255,0.75);
+	transition: 0.3s all ease;
+}
+
+.contact-us-section .left-side {
+	/*background-image: url(Images/hth1.jpg);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 100px;
+    margin: 0px;
+}
+
+.contact-us-section .right-side {
+	/*background-image: url(Images/hth1.jpg);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 100px;
+    margin: 0px;
+}
+
+.contact-us-section p {
+	font-size: 1.25em;
+	text-align: left;
+}
+
+/* End of Contact Us Section */
+
+/* See More Arrow */
+
+@keyframes seeMoreArrow {
+	0% {
+		color: transparent;
+		top: 0px;
+	}
+
+	10% {
+		color: white
+	}
+
+	50% {
+		color: #bb0000;
+	}
+
+	100% {
+		color: transparent;
+		top: 30px;
+	}
+}
+
+@keyframes arrowFloor {
+	0% {
+		border-bottom: 1px solid rgba(255,255,255,0);
+	}
+
+	90% {
+		border-bottom: 1px solid rgba(255,255,255,0.5);
+	}
+
+	100% {
+		border-bottom: 1px solid rgba(255,255,255,0);
+	}
+}
+
+.see-more {
+	position: absolute;
+    bottom: 7.5em;
+    width: 5%;
+    left: 47.5%;
+    text-align: center;
+    height: 5em;
+    border-bottom: 1px solid rgba(255,255,255,0);
+}
+
+.see-more i {
+	position: relative;
+	font-size: 3em;
+	color: white;
+	animation: 1s ease 9s infinite seeMoreArrow forwards;
+}
+
+.see-more i:hover {
+	text-shadow: 0px 0px 30px black;
+	transition: 0.3s all ease;
+}
+
+.see-more i::after {
+	opacity: 0;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.5em;
+    content: 'See More';
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    top: -4em;
+    display: block;
+    transition: 0.3s all ease;
+}
+
+.see-more i:hover::after {
+	opacity: 1;
+	animation-delay: 1s;
+}
+
+/* End of See More Arrow */
+
+/* Back To Top Button */
+
+.back-to-top {
+	position: fixed;
+    display: block;
+    width: 16em;
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid white;
+    bottom: 0px;
+    right: 50px;
+    padding: 30px;
+    box-shadow: 0px 0px 250px black;
+    transition: 0.3s all ease;
+}
+
+.back-to-top:hover {
+	background-color: rgba(187,0,0,0.9);
+	border: 1px solid transparent;
+	box-shadow: 0px 0px 200px black;
+	transition: 0.3s all ease;
+}
+
+.back-to-top:active {
+	border-top: 5px solid white;
+	transition: 0.3s all ease;
+}
+
+.back-to-top:hover span {
+	color: white;
+	transition: 0.3s all ease;
+}
+
+.back-to-top span {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color: black;
+}
+
+.back-to-top i {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+/* End of Back To Top Button */
+
+/* Footer */
+
+footer {
+	font-family: 'Titillium Web', sans-serif;
+	text-align: center;
+    padding: 60px;
+    color: black;
+    /* border-top: 1px solid rgba(255,255,255,0.25); */
+    letter-spacing: 2px;
+    margin-top: 0vh;
+    padding-top: 10vh;
+    border-bottom: 5px solid #bb0000;
+    background-image: url(Images/asda.jpeg);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+footer a {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	color: black;
+}
+
+footer a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+footer .footer-copyright {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 1.25em;
+	color: black;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+footer span {
+	font-size: 1.5em;
+	display: block;
+}
+
+footer li {
+	font-family: 'Titillium Web', sans-serif;
+	list-style: none;
+	letter-spacing: 0px;
+	border-bottom: 1px solid transparent;
+	transition: 0.3s all ease;
+}
+
+footer li:hover {
+	border-bottom: 1px solid rgba(0,0,0,0.5);
+	transition: 0.3s all ease;
+}
+
+footer i {
+	border: 1px solid rgba(0,0,0,0.25);
+    padding: 15px;
+    width: 2.25em;
+    margin: 15px;
+    transition: 0.3s all ease-in-out;
+}
+
+footer .footer-fw {
+	font-size: 2em;
+	width: 100%;
+	padding-top: 2em;
+}
+
+footer .footer-fw a:hover i{
+	background-color: black;
+	color: white;
+	transition: 0.3s all ease;
+}
+
+footer a.footer-link {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+footer .footer-dim {
+    height: 100%;
+    background-color: rgba(255,255,255,0.75);
+    padding-top: 10vh;
+    margin-top: -10vh;
+    padding-bottom: 60px;
+    margin-bottom: -60px;
+    margin-left: -60px;
+    padding-left: 60px;
+    margin-right: -60px;
+    padding-right: 60px;
+}
+
+/* End of Footer */
+
+/* Donate Page */
+
+.donate-page .jumbotron {
+	background-image: url(Images/hth3.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.donate-page .jumbotron-dim  {
+	background-color: rgba(187,0,0,0.75);
+}
+
+.donate-page .gofundme {
+	text-align: center;
+	padding: 200px;
+	background-color: black;
+	background-image: url(Images/hth6.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	transition: 0.3s all ease;
+}
+
+.donate-page .gofundme:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.donate-page .gofundme a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 30px;
+    border: 1px solid white;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+}
+
+.donate-page .gofundme a.cta:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.donate-page .gofundme h2.title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.donate-page .gofundme h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.donate-page .gofundme .tint {
+	background-color: rgba(0,0,0,0.6);
+	padding: 100px;
+    margin: -200px;
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.donate-page .gofundme .tint {
+		background-color: rgba(0,0,0,0.5);
+		padding: 200px;
+	    margin: -200px;
+	    transition: 0.3s all ease;
+	}
+
+}
+
+.donate-page .gofundme .tint:hover {
+	background-color: rgba(0,0,0,0.6);
+	transition: 0.3s all ease;
+}
+
+.donate-page .donate-message-content {
+	text-align: center;
+	padding: 200px;
+	background-color: white;
+	color: black;
+	background-image: url(Images/lidl.jpeg);
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	transition: 0.3s all ease;
+}
+
+.donate-page .donate-message-content:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.donate-page .donate-message-content a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 30px;
+    border: 1px solid white;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+}
+
+.donate-page .donate-message-content a.cta:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.donate-page .donate-message-content h2.title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.donate-page .donate-message-content h2.article-subheader {
+	text-align: left;
+    font-size: 2em;
+    padding-bottom: 0.25em;
+    border-left: 1px solid rgba(0,0,0,0.25);
+    padding-left: 2%;
+    margin-left: -2%;
+}
+
+.donate-page .donate-message-content h1 {
+	font-size: 4em;
+	text-align: left;
+	padding-bottom: 1em;
+}
+
+.donate-page .donate-message-content h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.donate-page .donate-message-content p {
+	font-size: 1.25em;
+	text-align: left;
+	/*padding-left: 15%;*/
+	padding-bottom: 25px;
+	line-height: 30px;
+	/*width: 70%;*/
+}
+
+.donate-page .donate-message-content img {
+	max-width: 100%;
+	padding-bottom: 25px;
+}
+
+.donate-page .donate-message-content span.caption {
+	font-family: 'Titillium Web', sans-serif;
+	color: grey;
+	font-size: 1em;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.donate-page .donate-message-content .tint {
+	background-color: rgba(255,255,255,0.95);
+	padding: 100px;
+    margin: -200px;
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.donate-page .donate-message-content .tint {
+		background-color: rgba(255,255,255,0.975);
+		padding: 200px;
+	    margin: -200px;
+	    transition: 0.3s all ease;
+	}
+
+}
+
+/* End of Donate Page */
+
+/* Big Event Page */
+
+.bigevent-page .jumbotron {
+	padding-top: 30vh;
+	padding-bottom: 15vh;
+	margin-bottom: -15px;
+	background-image: url(Images/rave.jpg);
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.bigevent-page .jumbotron h1 {
+	text-align: center;
+	width: 100%;
+}
+
+.bigevent-page .jumbotron a.cta-event {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 5em;
+    display: inline-block;
+    margin: 15px;
+    margin-top: 30px;
+    border: 1px solid rgba(255,255,255,0.5);
+    font-size: 2em;
+    width: 15em;
+    transition: 0.3s all ease;
+}
+
+.bigevent-page .jumbotron a.cta-event:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+.bigevent-page .jumbotron a.cta-event.event-day {
+	color: white;
+	background-image: url(Images/rave-dark.jpg);
+	background-position: -1000%;
+	background-size: cover;
+	background-repeat: no-repeat;
+    transition: 0.75s all ease;
+}
+
+.bigevent-page .jumbotron a.cta-event.event-day:hover {
+	background-image: url(Images/rave-dark.jpg);
+	background-position: 0%;
+	background-size: cover;
+	border: none;
+    transition: 0.75s all ease;
+}
+
+.bigevent-page .jumbotron a.cta-event.event-night {
+	color: white;
+	background-image: url(Images/moon.jpg);
+	background-position: -1000%;
+	background-size: cover;
+	background-repeat: no-repeat;
+    transition: 0.75s all ease;
+}
+
+.bigevent-page .jumbotron a.cta-event.event-night:hover {
+	background-image: url(Images/moon.jpg);
+	background-position: 0%;
+	background-size: cover;
+	border: none;
+    transition: 0.75s all ease;
+}
+
+.bigevent-page .about-big-event {
+	text-align: center;
+	padding: 200px;
+	background-color: black;
+	/*background-attachment: fixed;
+	background-position: top;*/
+	transition: 0.3s all ease;
+}
+
+.bigevent-page .about-big-event:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.bigevent-page .about-big-event a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 30px;
+    border: 1px solid white;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+}
+
+.bigevent-page .about-big-event a.cta:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.bigevent-page .about-big-event h2.title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.bigevent-page .about-big-event h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.bigevent-page .about-big-event .tint {
+	background-color: rgba(0,0,0,0.6);
+	padding: 100px;
+    margin: -200px;
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.bigevent-page .about-big-event .tint {
+		background-color: rgba(0,0,0,0.5);
+		padding: 200px;
+	    margin: -200px;
+	    transition: 0.3s all ease;
+	}
+
+}
+
+.bigevent-page .about-big-event .tint:hover {
+	background-color: rgba(0,0,0,0.6);
+	transition: 0.3s all ease;
+}
+
+.bigevent-page .about-big-event .day-event-info, .bigevent-page .about-big-event .night-event-info, {
+	text-align: center;
+	padding: 200px;
+	margin: -200px;
+	background-color: white;
+	background-size: cover;
+	background-position: center;
+	color: black;
+	transition: 0.3s all ease;
+}
+
+.bigevent-page .about-big-event.day{
+	background-image: url(Images/olympic-park.jpg);
+	background-attachment: fixed;
+}
+
+.bigevent-page .about-big-event.night {
+	background-image: url(Images/rave-2.jpg);
+	background-attachment: fixed;
+}
+
+.bigevent-page .about-big-event.night-2 {
+	background-image: url(Images/moon.jpg);
+	background-position: 50%;
+}
+
+.bigevent-page .about-big-event.night-3 {
+	background-image: url(Images/sky.jpg);
+	background-position: top;
+}
+
+.bigevent-page .about-big-event .day-event-info h2, .bigevent-page .about-big-event .night-event-info h2  {
+	font-size: 3em;
+}
+
+.bigevent-page .about-big-event .day-event-info p, .bigevent-page .about-big-event .night-event-info p {
+	font-size: 1.5em;
+	width: 75%;
+	margin-left: 12.5%;
+}
+
+/* End of Big Event Page */
+
+/* Get Involved Page */
+
+.getinvolved-page .jumbotron {
+	padding-top: 30vh;
+	padding-bottom: 30vh;
+	margin-bottom: -15px;
+	background-image: url(Images/asda.jpeg);
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.getinvolved-page .jumbotron h2 {
+	text-align: left;
+}
+
+.getinvolved-page .about-get-involved {
+	text-align: center;
+	padding: 200px;
+	background-color: black;
+	/*background-attachment: fixed;
+	background-position: top;*/
+	transition: 0.3s all ease;
+}
+
+.getinvolved-page .about-get-involved:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.getinvolved-page .about-get-involved a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 30px;
+    border: 1px solid white;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+}
+
+.getinvolved-page .about-get-involved a.cta:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.getinvolved-page .about-get-involved h2.title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.getinvolved-page .about-get-involved h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.getinvolved-page .about-get-involved .tint {
+	background-color: rgba(0,0,0,0.6);
+	padding: 100px;
+    margin: -200px;
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.getinvolved-page .about-get-involved .tint {
+		background-color: rgba(0,0,0,0.5);
+		padding: 200px;
+	    margin: -200px;
+	    transition: 0.3s all ease;
+	}
+
+}
+
+.getinvolved-page .about-get-involved .tint:hover {
+	background-color: rgba(0,0,0,0.6);
+	transition: 0.3s all ease;
+}
+
+.getinvolved-page .about-get-involved.bag-packing {
+	background-image: url(Images/asda.jpeg);
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.getinvolved-page .about-get-involved.bag-packing:hover {
+	background-position: 50%;
+	transition: 0.5s all ease;
+}
+
+.getinvolved-page .about-get-involved.outreach-tasks {
+	background-image: url(Images/hth2.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.getinvolved-page .about-get-involved.big-event {
+	background-image: url(Images/rave-2.jpg);
+	background-position: 50%;
+	background-attachment: fixed;
+}
+
+.getinvolved-page .donate-section .right-side {
+	padding: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.getinvolved-page .donate-section h2.title {
+	height: 35px;
+    margin-bottom: 35px;
+}
+
+.donate-info-section {
+	text-align: center;
+	padding: 200px;
+	background-image: url(Images/food.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	transition: 0.3s all ease;
+}
+
+.donate-info-section:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.donate-info-section a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 30px;
+    border: 1px solid white;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+}
+
+.donate-info-section a.cta:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.donate-info-section h2.title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.donate-info-section h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.donate-info-section .tint {
+	background-color: rgba(187,0,0,1);
+	padding: 100px;
+    margin: -200px;
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.donate-info-section .tint {
+		background-color: rgba(187,0,0,1);
+		padding: 200px;
+	    margin: -200px;
+	    transition: 0.3s all ease;
+	}
+
+}
+
+.donate-info-section .tint:hover {
+	background-color: rgba(187,0,0,0.95);
+	transition: 0.3s all ease;
+}
+
+/* End of Get Involved Page */
+
+/* About Us Page */
+
+.aboutus-page .jumbotron {
+	padding-top: 30vh;
+	padding-bottom: 30vh;
+	margin-bottom: -30px;
+	background-image: url(Images/lidl.jpeg);
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.aboutus-page .jumbotron h2 {
+	text-align: left;
+}
+
+.aboutus-page .about-us-content {
+	text-align: center;
+	padding: 200px;
+	background-color: white;
+	color: black;
+	background-image: url(Images/lidl.jpeg);
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	transition: 0.3s all ease;
+}
+
+.aboutus-page .about-us-content:hover {
+	background-position: 0% 10%;
+	transition: 0.3s all ease;
+}
+
+.aboutus-page .about-us-content a.cta {
+	font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 30px;
+    border: 1px solid white;
+    font-size: 1.25em;
+    width: 10em;
+    transition: 0.3s all ease;
+}
+
+.aboutus-page .about-us-content a.cta:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s all ease;
+}
+
+.aboutus-page .about-us-content h2.title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.aboutus-page .about-us-content h2.article-subheader {
+	text-align: left;
+    font-size: 2em;
+    padding-bottom: 0.25em;
+    border-left: 1px solid rgba(0,0,0,0.25);
+    padding-left: 2%;
+    margin-left: -2%;
+}
+
+.aboutus-page .about-us-content h1 {
+	font-size: 4em;
+	text-align: left;
+	padding-bottom: 1em;
+}
+
+.aboutus-page .about-us-content h3 {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.aboutus-page .about-us-content p {
+	font-size: 1.25em;
+	text-align: left;
+	/*padding-left: 15%;*/
+	padding-bottom: 25px;
+	line-height: 30px;
+	/*width: 70%;*/
+}
+
+.aboutus-page .about-us-content img {
+	max-width: 100%;
+	padding-bottom: 25px;
+}
+
+.aboutus-page .about-us-content span.caption {
+	font-family: 'Titillium Web', sans-serif;
+	color: grey;
+	font-size: 1em;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.aboutus-page .about-us-content .tint {
+	background-color: rgba(255,255,255,0.95);
+	padding: 100px;
+    margin: -200px;
+    transition: 0.3s all ease;
+}
+
+@media screen and (min-width: 768px) {
+
+	.aboutus-page .about-us-content .tint {
+		background-color: rgba(255,255,255,0.975);
+		padding: 200px;
+	    margin: -200px;
+	    transition: 0.3s all ease;
+	}
+
+}
+
+/* End of About Us page */
